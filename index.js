@@ -88,22 +88,22 @@ function main() {
         var primitiveType = gl.TRIANGLES;
         var offset = 0;
         var count = 18;  // 6 triangles in the 'F', 3 points per triangle
-        gl.drawArrays(primitiveType, offset, count);
+        //gl.drawArrays(primitiveType, offset, count);
 
-        // //AB-delete it
-        // let colors = [ [Math.random(), Math.random(), Math.random(), 1],
-        // [Math.random(), Math.random(), Math.random(), 1],
-        // [Math.random(), Math.random(), Math.random(), 1],
-        // ]
-        // // Draw each triangle separately
-        // for (let start = 0, color_index = 0; start < 18; start += 6, color_index += 1) {
-        //     // Set the color of the triangle
-        //     gl.uniform4fv(colorLocation, colors[color_index]);
+        //AB-delete it
+        let colors = [ [Math.random(), Math.random(), Math.random(), 1],
+        [Math.random(), Math.random(), Math.random(), 1],
+        [Math.random(), Math.random(), Math.random(), 1],
+        ]
+        // Draw each triangle separately
+        for (let start = 0, color_index = 0; start < 18; start += 6, color_index += 1) {
+            // Set the color of the triangle
+            gl.uniform4fv(colorLocation, colors[color_index]);
 
-        //     // Draw a single triangle
-        //     gl.drawArrays(primitiveType, start, 6);
+            // Draw a single triangle
+            gl.drawArrays(primitiveType, start, 6);
 
-        // }
+        }
 
 
 
